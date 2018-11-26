@@ -81,6 +81,16 @@ end
   #     id, name, breed = *DB[:conn].execute(sql,id)[0]
   #     new(id: id, name:name, breed:breed)
   #   end
+  def self.find_by_name name
+  sql = <<-SQL
+    SELECT * FROM students
+    WHERE name = ?
+  SQL
+
+  DB[:conn].execute(sql,name).map do |row|
+    new_from_db(row)
+   end.first
+ end
 
    def update
      sql = "UPDATE students SET name = ?, breed = ? WHERE id = ?"
