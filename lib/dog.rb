@@ -73,9 +73,9 @@ class Dog
 #    sql = <<-SQL
 #    SELECT * FROM dogs WHERE name = ? AND breed = ?
 #    SQL
-# 
+#
 #    result = DB[:conn].execute(sql,attr[:name],attr[:breed])[0]
-# 
+#
 #    if result
 #      id, name, breed = *result
 #      new(id:id, name:name, breed:breed)
