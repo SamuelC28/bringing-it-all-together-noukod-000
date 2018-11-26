@@ -83,7 +83,7 @@ end
   #   end
   def self.find_by_name name
   sql = <<-SQL
-    SELECT * FROM students
+    SELECT * FROM dogs
     WHERE name = ?
   SQL
 
