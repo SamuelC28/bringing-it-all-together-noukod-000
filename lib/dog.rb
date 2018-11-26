@@ -94,11 +94,11 @@ end
 
    def update
      sql = "UPDATE dogs SET name = ?, breed = ? WHERE id = ?"
-     DB[:conn].execute(sql)
+     DB[:conn].execute(sql, name, breed, id)
   end
 
   # def update
-  #     sql = <<-SQL
+  #     sql = <<-SQLs
   #     UPDATE dogs SET name = ?, breed = ?
   #     WHERE id = ?
   #     SQL
