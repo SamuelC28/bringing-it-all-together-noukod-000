@@ -47,7 +47,7 @@ class Dog
     find_or_create_by(name: row[1], breed: row[2])
  end
 
- def self.find_or_create_by **attr 
+ def self.find_or_create_by **attr
    sql = <<-SQL
    SELECT * FROM dogs WHERE name = ? AND breed = ?
    SQL
