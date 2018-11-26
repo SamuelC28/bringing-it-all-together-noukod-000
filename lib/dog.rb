@@ -52,7 +52,7 @@ class Dog
  #     SELECT * FROM dogs WHERE name = ? AND breed = ?
  #   SQL
  #  dog = DB[:conn].execute(name:name, breed:breed)
- # 
+ #
  #  if dog
  #       id, name, breed = *dog
  #       new(id:id, name:name, breed:breed)
